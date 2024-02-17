@@ -18,6 +18,7 @@
 
 <body class="font-raleway">
     <style>
+
         .font-inter {
             font-family: "Inter", sans-serif;
         }
@@ -228,64 +229,64 @@
                                 <div class="flex justify-center items-center">
                                     A
                                 </div>
-                                <button class="btn">
+                                <button id="A1" class="btn">
                                     A1
                                 </button>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     A2
                                 </button>
-                                <button class="btn col-start-5">
+                                <button onclick="" class="btn col-start-5">
                                     A3
                                 </button>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     A4
                                 </button>
                                 <!-- row 2 -->
                                 <div class="flex justify-center items-center">
                                     B
                                 </div>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     B1
                                 </button>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     B2
                                 </button>
-                                <button class="btn col-start-5">
+                                <button onclick="" class="btn col-start-5">
                                     B3
                                 </button>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     B4
                                 </button>
                                 <!-- row 3 -->
                                 <div class="flex justify-center items-center">
                                     C
                                 </div>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     C1
                                 </button>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     C2
                                 </button>
-                                <button class="btn col-start-5">
+                                <button onclick="" class="btn col-start-5">
                                     C3
                                 </button>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     C4
                                 </button>
                                 <!-- row 3 -->
                                 <div class="flex justify-center items-center">
                                     D
                                 </div>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     D1
                                 </button>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     D2
                                 </button>
-                                <button class="btn col-start-5">
+                                <button onclick="" class="btn col-start-5">
                                     D3
                                 </button>
-                                <button class="btn">
+                                <button onclick="" class="btn">
                                     D4
                                 </button>
                                 <!-- row 4 -->
@@ -399,7 +400,14 @@
                             <div class="bg-[#F7F8F8] rounded-xl p-8 flex flex-col gap-5">
                                 <div class="font-inter ">
                                     <div class="flex justify-between font-semibold">
-                                        <p class="">Seat</p>
+                                        <div class="flex">
+                                            <p class="">Seat</p>
+                                            <div
+                                                class="bg-[url('images/Group-3600.svg')] bg-no-repeat bg-center w-6 flex justify-center">
+                                                <p id="seatCount">0</p>
+                                            </div>
+
+                                        </div>
                                         <p class="">Class</p>
                                         <p class="">Price</p>
                                     </div>
@@ -473,6 +481,5 @@
 </body>
 <script src="scripts/utility.js"></script>
 <script src="scripts/smartTicket.js"></script>
-
 
 </html>
