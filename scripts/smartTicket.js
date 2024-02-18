@@ -17,14 +17,15 @@ function check(){
     nextEnable.setAttribute("disabled", "");
   }
 }
+
 function removeDuplicates(arr) {
   return arr.filter((item,
     index) => arr.indexOf(item) === index);
 }
+
 function globalvariable(inputvalue) {
   inputval = inputvalue;
   check();
-
 }
 
 function refreshSeatContainer() {
@@ -33,6 +34,7 @@ function refreshSeatContainer() {
   seatcount.innerText = 0;
   document.getElementById('total-price').innerText = 0;
   seatDec.innerText = 40;
+  document.getElementById('grand-total').innerText = 0;
 
 
   for (i = 0; i < selectedSeats.length; i++) {
@@ -54,6 +56,7 @@ function refreshSeatContainer() {
     total = 550 * selectedSeats.length;
     document.getElementById('total-price').innerText = total;
     seatDec.innerText = 40 - selectedSeats.length;
+    document.getElementById('grand-total').innerText = total
 
   }
   if (selectedSeats.length >= 4) {
@@ -104,24 +107,22 @@ let selectedSeats = [];
 const clickBtn = document.querySelectorAll(".gridButton");
 
 
-nextbtn = document.getElementById('next');
-nextbtn.addEventListener("click", function () {
-  console.log('click');
+// nextbtn = document.getElementById('next');
+// nextbtn.addEventListener("click", function () {
+//   console.log('click');
 
-  hideElementById('main');
-  showElementById('success');
 
-})
+// })
 
-contbtn = document.getElementById('continue');
-contbtn.addEventListener("click", function () {
-  console.log('click');
+// contbtn = document.getElementById('continue');
+// contbtn.addEventListener("click", function () {
+//   console.log('click');
 
-  showElementById('main');
+//   showElementById('main');
 
-  hideElementById('success');
+//   hideElementById('success');
 
-})
+// })
 function pushUnique(array, element) {
   if (!array.includes(element)) {
     array.push(element);

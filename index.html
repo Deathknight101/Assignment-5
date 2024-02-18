@@ -123,8 +123,8 @@
                 </div>
             </div>
             <!-- ticket booking -->
-            <div id="ticket-book" class="bg-[#F7F8F8] rounded-t-3xl border-2 border-b-0 border-green-700">
-                <div class="flex flex-col items-center mt-28 gap-6 mb-12">
+            <div id="ticket-book" class="bg-[#F7F8F8] rounded-t-3xl border-2 border-b-0 border-green-700 ">
+                <div class="flex flex-col items-center mt-28 gap-6 mb-16">
                     <h1 class="text-4xl font-bold">
                         P.H Paribahan
                     </h1>
@@ -134,7 +134,7 @@
                     </p>
                 </div>
                 <!-- seats -->
-                <div class="flex justify-center flex-col gap-7">
+                <div class="flex justify-center flex-col gap-7 pb-28">
                     <div class="bg-white flex rounded-3xl justify-center mx-80 ">
                         <div class="flex flex-col">
                             <div class=>
@@ -174,8 +174,8 @@
                                     <hr class="border-dashed border-1 border-gray-300">
                                     <div class="flex justify-between">
                                         <button class="btn">Boarding Point - Laxmipurs</button>
-                                        <button class="btn">Boarding Point - Laxmipurs</button>
-                                        <button class="btn">Boarding Point - Laxmipurs</button>
+                                        <button class="btn">Dropping Point - Bogura</button>
+                                        <button class="btn">Est. Time - 11 Hour</button>
                                     </div>
                                 </div>
                             </div>
@@ -405,7 +405,7 @@
                                                 <p class="">Seat</p>
                                                 <div id="seat-increment"
                                                     class="bg-[url('images/Group-3600.svg')] bg-no-repeat bg-center w-6 flex justify-center">
-                                                    <p id="seatCount">0</p>
+                                                    <p id="seatCount" class="text-white">0</p>
                                                 </div>
 
                                             </div>
@@ -422,19 +422,19 @@
                                     </div>
                                     <div class="flex justify-between font-inter font-semibold">
                                         <p>Total Price</p>
-                                        <p>BDT <span id="total-price"></span></p>
+                                        <p>BDT <span id="total-price">0</span></p>
                                     </div>
                                     <label class="input input-bordered flex items-center gap-2 ">
                                         <input id="disc-enable" type="text" class="grow" placeholder="Coupon"
                                             disabled />
                                         <button id="apply-btn"
-                                            class="rounded-lg bg-green-500 text-white font-semibold btn btn-disabled">Apply
+                                            class=" rounded-lg bg-green-500 text-white font-semibold btn btn-disabled">Apply
                                         </button>
 
                                     </label>
                                     <div class="flex justify-between font-inter font-semibold">
                                         <p>Grand Total</p>
-                                        <p>BDT <span id="grand-total"></span></p>
+                                        <p>BDT <span id="grand-total">0</span></p>
                                     </div>
 
                                 </div>
@@ -451,16 +451,14 @@
                                 <label class="input input-bordered flex items-center gap-2">
                                     <input type="text" class="grow" placeholder="Email" />
                                 </label>
-                                <button id="next" class="btn bg-green-500 text-white font-semibold" disabled
-                                    required>Next</button>
+                                <button id="next" onclick="my_modal_4.showModal()"
+                                    class="btn bg-green-500 text-white font-semibold" disabled required>Next</button>
                                 <div class="flex justify-center gap-11 font-inter text-gray-500">
                                     <a class="underline">Terms and Conditions</a>
                                     <a class="underline">Cancellation Policy</a>
                                 </div>
 
                             </div>
-
-
                         </div>
                     </div>
                 </div>
@@ -475,18 +473,27 @@
 
     </footer>
 </body>
-<section id="success" class="bg-[#F2F1F1] h-screen items-center flex justify-center hidden">
-    <div class="flex flex-col justify-center items-center p-20 bg-white  container rounded-2xl gap-4 text-center w-[718px]">
-        <img src="images/success.png" alt="">
-        <h1>Thank you for Booking Our Bus Seats.
-            We are working hard to find the best service and deals for you.
-        </h1>
-        <p>
-            Shortly you will find a confirmation in your email.
-        </p>
-        <button id="continue" class="btn">Continue</button>
-    </div>
-</section>
+<dialog id="my_modal_4" class="modal">
+    <section id="success" class="bg-[#F2F1F1] items-center flex justify-center">
+        <div
+            class="flex flex-col justify-center items-center p-20 bg-white  container rounded-2xl gap-4 text-center w-[718px]">
+            <img src="images/success.png" alt="">
+            <h1>Thank you for Booking Our Bus Seats.
+                We are working hard to find the best service and deals for you.
+            </h1>
+            <p>
+                Shortly you will find a confirmation in your email.
+            </p>
+            <div class="modal-action">
+                <form method="dialog">
+                    <button id="continue" class="btn">Continue</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+</dialog>
+
 <script src="scripts/utility.js"></script>
 <script src="scripts/smartTicket.js"></script>
 
